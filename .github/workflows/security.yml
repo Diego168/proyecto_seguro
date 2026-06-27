@@ -22,3 +22,6 @@ jobs:
       - name: Ejecutar analisis de seguridad
         run: |
           bandit -r .
+- name: Generar reporte de seguridad
+  run: |
+    bandit -r . -f txt -o reporte_bandit.txt
